@@ -1,33 +1,65 @@
-# PostIt version 1.0
+#
+> PostIt is a web Application that allows for Broadcast messaging to specified groups created.
 
-Postit is an App that allows for Broadcast messaging to groups. The Nodejs framework is used, all tests, functions and javascrit code are written in es6 but Babel is inplemneted to transpire down to es5 in the cases of browsers that dont yet identify with es6.
-
-The features includes User signups, create groups, add users to groups and post messages to a specified group.
-
-The frontend designs isnt functioning yet. You can test using the API routes creates via postman.
-- POST: api/user/login
-- POST: api/user/signup
-- POST: api/user/group
-- POST: api/user/group:groupid/user
-- POST: api/user/group:groupid/message
-- GET: api/user/group:groupid/message
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
 
 
-After cloning;
-Ensure you have a database name PostIt (use Postgresql) created locally before testing.
-run db:migrate to migrate the tables for use.
-run npm run start:dev to start up the server
+PostIt is a full fledge app that allows users to login, signup, create groups and add users to groups created and post messages.
+The API routes include:
 
-Install Postman and test GET: 127.0.0.1:8000
-you should see "welcome to the world of nothingness"
+* api/signup
+* api/login
+* api/user/group
+* api/user/groupid
+* api/user/groupid/message
 
-study the table created in your database to know the attributes required before running the apis above.
-NOTE:
-only login and signup works for now.
+## Installation
+You will need the Postgresql and Postman installed
 
-#TO- DO
--->ENSURE all api routes work well and properly
+1. kindly clone the repo
+```sh
+git clone https://github.com/ZainabOyewo/PostIt.git
+```
+2. Install all dependencies defined in the Package.json file
+3.   create a database PostIt in PgAdmin (Postgresql). To migrate the tables, run
+```sh
+sequelize db:migrate 
+```
+4. Start up your server to test API route. run: 
+```sh
+npm run start:build 
+```
+5. Open postman to test the api routes stated above.
 
+## Development setup
 
+DEPENDENCIES include;
+
+```sh
+npm install nodejs express
+npm install babel- cli
+npm install eslint
+npm install jsonwebtoken
+npm install bcrypt
+npm install sequelize
+npm install body-parser
+npm install nodemon
+```
+Please check the Package.json for more dependencies.
+
+## Release History
+
+* 0.0.1
+    * Work in progress
+
+## Meta
+
+Zainab Oyewo – [@YourTwitter](https://twitter.com/xeesays) – zainysham@gmail.com
+
+Distributed under the MIT license. See ``LICENSE`` for more information.
+
+## Contributing
+ I do not accept any contributions for now. Thank you.
 
 
