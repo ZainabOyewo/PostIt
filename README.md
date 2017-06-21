@@ -1,4 +1,4 @@
-#
+# PostIt
 > PostIt is a web Application that allows for Broadcast messaging to specified groups created.
 
 [![NPM Version][npm-image]][npm-url]
@@ -33,7 +33,6 @@ npm run start:build
 5. Open postman to test the api routes stated above.
 
 ## Development setup
-
 DEPENDENCIES include;
 
 ```sh
@@ -49,7 +48,6 @@ npm install nodemon
 Please check the Package.json for more dependencies.
 
 ## Release History
-
 * 0.0.1
     * Work in progress
 
@@ -62,4 +60,6 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 ## Contributing
  I do not accept any contributions for now. Thank you.
 
-
+<!-- Markdown link & img dfn's -->
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
