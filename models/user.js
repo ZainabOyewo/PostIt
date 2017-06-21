@@ -1,3 +1,4 @@
+import bcrypt from "bcrypt-nodejs";
 module.exports = (sequelize, DataTypes) => {
   const users = sequelize.define('users', {
     FirstName: {
@@ -16,13 +17,25 @@ module.exports = (sequelize, DataTypes) => {
     UserPassword: {
       type: DataTypes.STRING
   },
+
 }, {
-   classMethods: {
+   
+      hooks: {
+      beforeCreate: users => {
+      const salt = bcrypt.genSaltSync();
+     users.UserPassword = bcrypt.hashSync(users.UserPassword, salt);
+     }
+     },
+      classMethods: {
 		 associate: (models) => {
 		 users.belongsTo(models.membership);
 		 users.belongsTo(models.message);
-		 }
-		 }
+		 },
+		 
+     isPassword: (encodedPassword, password) => {
+    return bcrypt.compareSync(password, encodedPassword);
+     }
+   }
   });
   return users;
 };

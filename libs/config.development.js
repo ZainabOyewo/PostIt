@@ -8,4 +8,6 @@ module.exports = {
   underscored: true
  }
  }
+ jwtSecret: "i$ove@ND*L@",
+ jwtSession: {session: false}
  };

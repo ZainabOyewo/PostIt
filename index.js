@@ -7,9 +7,9 @@ import consign from "consign";
 
  
   consign()
-  .include("libs/config.js")
-  .include("db.js")
- //.then("models")
+  .include("libs/config.development.js")
+  .then("db.js")
+ .then("auth.js")
  .then("libs/middlewares.js")
  .then("routes")
  .then("libs/boot.js")
